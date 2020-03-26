@@ -1,10 +1,8 @@
-/**
+package ua.zp.braincad; /**
  * Эта программа отображает слово Hello в столбик.
  * Так же отображает слово World после каждой буквы табуляция.
  * @ author Roman Petrenko
  */
-
-package Lab2;
 
 public class ItemThree {
     public static void main(String[] args) {

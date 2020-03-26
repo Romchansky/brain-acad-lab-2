@@ -1,4 +1,4 @@
-package Lab3;
+package ua.zp.braincad;
 
 public class LessonThree {
 
