@@ -4,7 +4,7 @@
  * @ author Roman Petrenko
  */
 
-package ua.zp.braincad;
+package Lab2;
 
 public class ItemThree {
     public static void main(String[] args) {

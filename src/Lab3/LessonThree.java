@@ -1,4 +1,4 @@
-package com.company;
+package Lab3;
 
 public class LessonThree {
 
