@@ -1,6 +1,5 @@
 package ua.zp.braincad;
 
-
 import static java.lang.System.*;
 
 public class LessonFour {
@@ -11,6 +10,8 @@ public class LessonFour {
         numbers();
         daysOfWeek();
         numbersFactorial();
+        evenThreeNum();
+
 
     }
 
@@ -55,8 +56,26 @@ public class LessonFour {
         }
     }
 
-    private static void numbersFactorial(){
+    private static void numbersFactorial() {
+        int x = 7;
+        int result = 1;
+        for (int i = 1; i <= x; i++) {
+            result *= i;
+            if (result > 1000) {
+                out.println("Достигнут максимально возможный лимит");
+                return;
+            }
+            out.println(result);
+        }
 
+    }
+
+    private static void evenThreeNum() {
+
+        for (int i = 1; i < 128; i++) {
+            if (i % 3 == 0) out.println(i);
+
+        }
     }
 }
 
