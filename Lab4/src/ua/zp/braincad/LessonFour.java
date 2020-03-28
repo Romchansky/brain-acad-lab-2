@@ -5,7 +5,7 @@ import static java.lang.System.*;
 public class LessonFour {
     public static void main(String[] args) {
 
-        learnDebug();
+
         logicalExpressions();
         numbers();
         daysOfWeek();
@@ -15,11 +15,6 @@ public class LessonFour {
 
     }
 
-    private static void learnDebug() {
-        for (int i = 0; i < 10; i++) {
-            out.println(i);
-        }
-    }
 
     private static void logicalExpressions() {
         boolean a = true && false || true && !false; // false || true => true
@@ -74,7 +69,6 @@ public class LessonFour {
 
         for (int i = 1; i < 128; i++) {
             if (i % 3 == 0) out.println(i);
-
         }
     }
 }
