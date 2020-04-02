@@ -59,18 +59,24 @@ public class Lab5Test {
         // 2.2)
         // TODO calc sum of all numbers with odd indexes and print result.
         int[] testArrayOddIndex = Arrays.copyOf(testArray,testArray.length);
-        int sumOdd = 0;
+        int sumNumOdd = 0;
         for (int i = 0; i < testArrayOddIndex.length; i++) {
-             if (testArrayOddIndex[i] % 2 == 0) {
+            if (testArrayOddIndex[i] % 2 == 0) {
                 continue;
-            } else sumOdd += testArrayOddIndex[i];
-            System.out.println(sumOdd);
+            } else sumNumOdd += testArrayOddIndex[i];
+            System.out.println(sumNumOdd);
         }
 
 
         // 2.3)
         // TODO find max value in array.
-
+        int[] testArrayMaxValue = Arrays.copyOf(testArray,9);
+        int maxIndex = 0;
+        for (int i = 0; i <testArrayMaxValue.length ; i++) {
+            if(testArrayMaxValue[i]>maxIndex)
+                maxIndex = testArrayMaxValue[i];
+        }
+            System.out.println(maxIndex);
 
         // PART 3
 
