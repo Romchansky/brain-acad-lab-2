@@ -95,7 +95,7 @@ public class Lab5Test {
         int [][] ArrayDouble = new int[3][4];
         for (int i = 0; i <ArrayDouble.length; i++) {
             for (int j = 0; j <ArrayDouble[i].length ; j++) {
-                System.out.printf( "%d", ArrayDouble [i] [j]);
+                System.out.printf("%d",ArrayDouble [i] [j]);
             }
             System.out.println();
         }
@@ -131,8 +131,16 @@ public class Lab5Test {
         int sum = 0;
         // TODO* calc sum only max and min values of matrix by expression: 2 < i <= 5 and only every third j value.
 
+        for (int i = 2; i <=5 ; i++) {
+            if(i%3==0){
+                
+            }
+
+        }
         System.out.println(sum);
+
     }
+
 }
 
 
