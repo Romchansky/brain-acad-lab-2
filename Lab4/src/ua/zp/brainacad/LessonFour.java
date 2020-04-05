@@ -1,4 +1,4 @@
-package ua.zp.braincad;
+package ua.zp.brainacad;
 
 import static java.lang.System.*;
 

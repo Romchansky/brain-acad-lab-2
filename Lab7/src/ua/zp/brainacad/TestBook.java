@@ -1,6 +1,4 @@
-package ua.zp.braincad;
-
-import java.sql.SQLOutput;
+package ua.zp.brainacad;
 
 public class TestBook {
     public static void main(String[] args) {

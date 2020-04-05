@@ -1,6 +1,5 @@
-package ua.zp.braincad;
+package ua.zp.brainacad;
 
-import java.util.Arrays;
 
 public class PostOffice {
 

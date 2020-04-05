@@ -1,4 +1,4 @@
-package ua.zp.braincad; /**
+package ua.zp.brainacad; /**
  * Эта программа выводит имя и фамилию человека
  * @ author Roman Petrenko
  */

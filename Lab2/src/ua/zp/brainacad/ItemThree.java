@@ -1,4 +1,4 @@
-package ua.zp.braincad; /**
+package ua.zp.brainacad; /**
  * Эта программа отображает слово Hello в столбик.
  * Так же отображает слово World после каждой буквы табуляция.
  * @ author Roman Petrenko

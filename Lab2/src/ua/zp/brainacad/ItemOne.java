@@ -1,4 +1,4 @@
-package ua.zp.braincad; /**
+package ua.zp.brainacad; /**
  * Эта программа отображает приветствие академии Brain.
  * @ author Roman Petrenko
  */
