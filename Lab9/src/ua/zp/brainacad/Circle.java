@@ -6,6 +6,8 @@ public class Circle {
     public double square;
     public String color;
 
+
+
     public Circle(double radius) {
         this.radius = radius;
         this.color = "Красный";
@@ -23,5 +25,15 @@ public class Circle {
     public void infoCircle() {
         System.out.println("Радиус: " + radius + "\nДлина окружности: " + circumference +
                 "\nПлощадь окружности: " + square + "\nЦвет: " + color);
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", circumference=" + circumference +
+                ", square=" + square +
+                ", color='" + color + '\'' +
+                '}';
     }
 }
