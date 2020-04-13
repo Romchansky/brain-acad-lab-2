@@ -1,5 +1,16 @@
 package ua.zp.brainacad;
 
+/**
+ * Класс Circle
+ * Первым шагом происходит объявление полей класса.
+ * Создаются два конструктора которые принимают на вход разное количество параметров.
+ * Создаем метод для вывода информации в консоль о каждом из объектов.
+ * Переопределяем параметр radius для правильного вывода в консоли в классе Pizzeria
+ * @author Roman Petrenko
+ */
+
+
+
 public class Circle {
     public double radius;
     public double circumference;
@@ -31,9 +42,7 @@ public class Circle {
     public String toString() {
         return "Circle{" +
                 "radius=" + radius +
-                ", circumference=" + circumference +
-                ", square=" + square +
-                ", color='" + color + '\'' +
                 '}';
     }
 }
+
