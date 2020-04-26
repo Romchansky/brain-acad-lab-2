@@ -1,5 +1,7 @@
 package ua.zp.brainacad;
 
+import static java.util.Objects.nonNull;
+
 public class BookNew {
 
     static String currency = "грн";
@@ -11,7 +13,24 @@ public class BookNew {
     public int numberOfBooksInACycle;
     public int numberOfPage;
     public double price;
-    public int[] sheetBook;
+    public int [] chapters;
+    private String[]arr;
+
+    public String[] getArr() {
+        return arr;
+    }
+
+    public void setArr(String[] arr) {
+        this.arr = arr;
+    }
+
+    public int[]getChapters(){
+        return chapters;
+    }
+
+    public void setChapters(int [] chapters){
+        this.chapters=chapters;
+    }
 
     public static String getCurrency() {
         return currency;
@@ -81,12 +100,30 @@ public class BookNew {
         this.price = price;
     }
 
-    public int[] sheetBook(int numberOfPage) {
-        sheetBook = new int[numberOfPage];
-        for (int i = 0; i < sheetBook.length; i++) {
-            sheetBook[i]=(i+1);
+    public static String [] generateArrayByPages(int numberOfPage) {
+        String [] array = new String[numberOfPage];
+        for (int i = 0; i < numberOfPage; i++) {
+            array[i]=(i+1) + "стр.";
         }
-        return sheetBook;
+        return array;
+    }
+
+    public static String [][] generateChaptersByPages(String [] pages,int chaptersCount){
+        if(nonNull(pages)){
+            throw new RuntimeException("глав не должно быть меньше чем 1");
+        }
+        if(chaptersCount <= 0) {
+            throw new RuntimeException("глав не должно быть меньше чем 1");
+        }
+
+        int size = pages.length/chaptersCount;
+        String [][] chapters = new String[chaptersCount][size];
+        for (int i = 0; i <size ; i++) {
+            for (int j = i; j < size ; j++) {
+                chapters[i][j] = pages[j+size*i];
+            }
+        }
+        return chapters;
     }
 }
 

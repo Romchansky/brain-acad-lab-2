@@ -8,9 +8,9 @@ public class main {
 
 
        Film f1 = new Film("Matrix","110 min","Science fiction/Action");
-       Film f2 = new Film("Star Wars","130 min","Science fiction/Adventure");
-       Film f3 = new Film("Star Wars II","130 min","Science fiction/Adventure");
-       Film f4 = new Film("Dune","130 min","Science fiction/Adventure");
+       Film f2 = new Film("Star Wars","125 min","Science fiction/Adventure");
+       Film f3 = new Film("Star Wars II","160 min","Science fiction/Adventure");
+       Film f4 = new Film("Dune","140 min","Science fiction/Adventure");
 
 
        Library l1 = new Library("Bukva");

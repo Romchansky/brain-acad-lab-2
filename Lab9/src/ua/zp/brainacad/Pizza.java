@@ -9,7 +9,7 @@ package ua.zp.brainacad;
  * @author Roman Petrenko
  */
 
-public class Pizza {
+public class Pizza {                                // Поля класса
     public String name;
     public Circle basis;
     public double weight;
@@ -18,7 +18,7 @@ public class Pizza {
 
 
 
-    public Pizza(String name,double weight, String composition, double cost, double diameter) {
+    public Pizza(String name,double weight, String composition, double cost, double diameter) {  // Это вот конструктор
         this.name = name;
         this.basis = new Circle(diameter/2);
         this.weight = weight;
@@ -29,7 +29,7 @@ public class Pizza {
     }
 
     @Override
-    public String toString() {
+    public String toString() {                      //Метод переопеределения
         return "Pizza{" +
                 "name='" + name + '\'' +
                 ", basis=" + basis +
