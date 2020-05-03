@@ -2,9 +2,6 @@ package ua.zp.brainacad.abstracts;
 
 abstract class AbstractCooker extends AbstractDevice {
 
-    public AbstractCooker(String name, String serialNumber) {
-        super(name, serialNumber);
-    }
 
     @Override
     void powerOn() {

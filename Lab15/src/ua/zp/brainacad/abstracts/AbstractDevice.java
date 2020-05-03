@@ -5,8 +5,20 @@ abstract class AbstractDevice {
     private String name;
     private String serialNumber;
 
-    public AbstractDevice(String name, String serialNumber) {
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 

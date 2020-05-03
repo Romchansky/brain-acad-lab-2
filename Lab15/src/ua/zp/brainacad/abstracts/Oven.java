@@ -1,9 +1,6 @@
 package ua.zp.brainacad.abstracts;
 
 public class Oven extends AbstractCooker {
-    public Oven(String name, String serialNumber) {
-        super(name, serialNumber);
-    }
 
     @Override
     void cook() {

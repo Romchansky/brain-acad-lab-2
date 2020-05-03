@@ -1,15 +1,12 @@
 package ua.zp.brainacad.abstracts;
 
-
-
 public class DialPhone extends Phone  {
+
    private String hasAnswerPhone;
 
 
-    public DialPhone(String name, String serialNumber, String hasAnswerPhone) {
-        super(name, serialNumber);
-        this.hasAnswerPhone = hasAnswerPhone;
-    }
+
+
 
     @Override
     void powerOn() {
@@ -30,14 +27,9 @@ public class DialPhone extends Phone  {
         System.out.println("Привет, это автоответчик, оставте сообщение после сигнала");
     }
 
-    @Override
-    public String toString() {
-        return "DialPhone{" +
-                "hasAnswerPhone='" + hasAnswerPhone + '\'' +
-                '}';
     }
 
 
 
 
-}
+

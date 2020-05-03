@@ -4,25 +4,24 @@ package ua.zp.brainacad.abstracts;
 public class Main {
     public static void main(String[] args) {
 
+        devices();
 
-        AbstractDevice mobile = new Mobile("Google", "45112244", 2, "LED");
+        Mobile mobile = new Mobile();
         System.out.println(mobile);
         mobile.switchingOnOff();
-        //mobile.call();
+        mobile.call();
 
         System.out.println();
 
-        AbstractDevice smartPhone = new SmartPhone("Google pixel 3", "IPS", 1,"LED");
-        System.out.println(smartPhone);
+        SmartPhone smartPhone = new SmartPhone();
         smartPhone.powerOn();
         smartPhone.powerOff();
-        //smartPhone.call();
-        //smartPhone.runApp();
+        smartPhone.call();
+        smartPhone.runApp();
 
         System.out.println();
 
-        DialPhone dialPhone = new DialPhone("Panasonic", "44457866", "Играет имперский марш");
-        System.out.println(dialPhone);
+        DialPhone dialPhone = new DialPhone();
         dialPhone.powerOn();
         dialPhone.powerOff();
         dialPhone.call();
@@ -30,26 +29,25 @@ public class Main {
 
         System.out.println();
 
-        Multicook multicook = new Multicook("Sony","556654");
+        Multicook multicook = new Multicook();
         multicook.cook();
         multicook.switchProgram(5);
 
         System.out.println();
 
-        Oven oven = new Oven("Lg","2223665");
+        Oven oven = new Oven();
         oven.cook();
         oven.initTimer(45);
 
+        devices(mobile,smartPhone,dialPhone,multicook,oven);
     }
 
+    private static void devices(AbstractDevice... devicesArray) {
 
-    public static String devices(AbstractDevice... name) {
-
-        for (AbstractDevice a : name) {
+        for (AbstractDevice a : devicesArray) {
             a.powerOff();
-            System.out.println("устройство: " + name + "выключено");
+            System.out.println("устройство: " + a.getName() + "выключено");
         }
-        return null;
     }
 
 }

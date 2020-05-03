@@ -4,12 +4,22 @@ public class Mobile extends Phone {
     private int simCount;
     private String display;
 
-    public Mobile(String name, String serialNumber, int simCount, String display) {
-        super(name, serialNumber);
-        this.simCount = simCount;
-        this.display = display;
+
+    public int getSimCount() {
+        return simCount;
     }
 
+    public void setSimCount(int simCount) {
+        this.simCount = simCount;
+    }
+
+    public String getDisplay() {
+        return display;
+    }
+
+    public void setDisplay(String display) {
+        this.display = display;
+    }
 
     @Override
     void powerOn() {
@@ -24,13 +34,5 @@ public class Mobile extends Phone {
     @Override
     void call() {
         System.out.println("Открываем список контактов, находим номер, нажимаем вызов");
-    }
-
-    @Override
-    public String toString() {
-        return "Mobile{" +
-                "simCount=" + simCount +
-                ", display='" + display + '\'' +
-                '}';
     }
 }
