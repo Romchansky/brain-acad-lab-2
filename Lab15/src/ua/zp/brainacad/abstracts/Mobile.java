@@ -35,4 +35,14 @@ public class Mobile extends Phone {
     void call() {
         System.out.println("Открываем список контактов, находим номер, нажимаем вызов");
     }
+
+    @Override
+    public String toString() {
+        return "Mobile{" +
+                "simCount=" + simCount +
+                ", display='" + display + '\'' +
+                '}';
+    }
 }
+
+

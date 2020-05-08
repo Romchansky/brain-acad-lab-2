@@ -1,7 +1,21 @@
 package ua.zp.brainacad.interfaces;
 
-public class SmartPhone implements Caller,EmailSender {
+public class SmartPhone implements Caller, EmailSender {
 
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "SmartPhone{}";
+    }
 
     @Override
     public void call(String contact) {
