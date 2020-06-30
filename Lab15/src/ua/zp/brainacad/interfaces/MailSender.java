@@ -18,5 +18,5 @@ public interface MailSender {
     void sendMail (String mail);
 
 
-    String getName();
+     String getName();
 }

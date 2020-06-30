@@ -1,4 +1,4 @@
-package ua.zp.brainacad.one.one;
+package ua.zp.brainacad.one;
 
 import java.io.InputStream;
 import java.net.URL;

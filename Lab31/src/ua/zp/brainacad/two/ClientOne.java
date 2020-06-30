@@ -1,18 +1,20 @@
-package ua.zp.brainacad.one.one;
-
+package ua.zp.brainacad.two;
 
 import java.io.*;
 import java.net.*;
-public class Client {
+
+public class ClientOne extends Thread {
     public static void main(String[] args) throws IOException {
-        System.out.println("Enter to send message to server. Write ‘exit’ to close");
-        try (Socket connectToServerSocket = new Socket("localhost", 8888);
+       System.out.println("Enter to send message to server. Write ‘exit’ to close");
+        try (Socket connectToServerSocket = new Socket("localhost", 8081);
              BufferedReader in = new BufferedReader(
                      new InputStreamReader(connectToServerSocket.getInputStream())
              );
              PrintWriter out = new PrintWriter(connectToServerSocket.getOutputStream(), true);
              BufferedReader inu = new BufferedReader(new InputStreamReader(System.in));) {
-            String userInput, serverOutput;
+            String userInput;
+            String  serverOutput;
+
             while ((userInput = inu.readLine()) != null) {
                 out.println(userInput);
                 serverOutput = in.readLine();

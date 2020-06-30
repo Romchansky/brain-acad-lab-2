@@ -25,6 +25,8 @@ public class WrappersTest {
             Integer i2 = Integer.valueOf(13);
             Integer i3 = new Integer(13);
             Integer i4 = Integer.parseInt("13");
+            Integer i = Integer.valueOf(1777);
+            System.out.println(i);
 
             Float f1 = 1245f;
             Float f2 = Float.valueOf(1234f);
