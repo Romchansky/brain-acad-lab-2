@@ -8,7 +8,7 @@ import static java.lang.Thread.sleep;
 public class Race {
     public static void main(String[] args) {
 
-        ArrayList<RaceCarRunnable> cars = new ArrayList<>();
+        List<RaceCarRunnable> cars = new ArrayList<>();
         cars.add(new RaceCarRunnable("Ford Mustang Shelby GT500", 300, 402));
         cars.add(new RaceCarRunnable("Chevrolet Camaro  ZL1", 321, 402));
         cars.add(new RaceCarRunnable("Nissan GT-R", 315, 402));
@@ -23,7 +23,7 @@ public class Race {
     }
 
     static void startRace(List<Thread> cars) {
-        boolean add = cars.add(new Thread(() -> {
+        new Thread(() -> {
             try {
                 for (int i = 3; i >= 1; i--) {
                     System.out.println(i + "...");
@@ -36,7 +36,7 @@ public class Race {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-        }));
+        }).start();
     }
 }
 
