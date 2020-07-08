@@ -46,7 +46,7 @@ public class Race {
                 System.out.println("GO!!!");
                 for (Thread thread : cars) {
                     thread.start();
-                    startRaceTime.lazySet(currentTimeMillis());
+                    startRaceTime.set(currentTimeMillis());
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();

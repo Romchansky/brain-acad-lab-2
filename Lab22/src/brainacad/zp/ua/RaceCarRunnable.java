@@ -57,8 +57,8 @@ public class RaceCarRunnable extends Car {
     }
 
     void print(){
-        System.out.println("Car name: " + getName() + " => " + "/ speed: " + getRandomSpeed() +
-                " / progress: " + getPassed() + " / " + getDistance() + "/ time: " + Race.startRaceTime);
+        System.out.println("Car name: " + getName() + " => " + " speed: " + getRandomSpeed() +
+                "  progress: " + getPassed() + "  " + getDistance() + "  time: " + Race.startRaceTime);
     }
 
     @Override
