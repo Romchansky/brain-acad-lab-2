@@ -3,6 +3,8 @@ package brainacad.zp.ua;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
+import static brainacad.zp.ua.Race.*;
+import static java.lang.System.*;
 import static java.lang.Thread.sleep;
 
 public class RaceCarRunnable extends Car {
@@ -57,8 +59,8 @@ public class RaceCarRunnable extends Car {
     }
 
     void print(){
-        System.out.println("Car name: " + getName() + " => " + "/ speed: " + getRandomSpeed() +
-                " / progress: " + getPassed() + " / " + getDistance() + "/ time: " + Race.startRaceTime);
+        out.println("Car name: " + getName() + " => " + " speed: " + getRandomSpeed() +
+                "  progress: " + getPassed() + "  " + getDistance() + "  time: " + startRaceTime + " " + finishTime);
     }
 
     @Override
@@ -72,12 +74,14 @@ public class RaceCarRunnable extends Car {
                 sleep(1000);
                 if(passed >= distance)
                     isFinish = true;
+                finishTime = System.currentTimeMillis();
+                finishTime -= startRaceTime.get();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             countDownLatch.countDown();
             if(passed>=distance){
-                System.out.println("car Place: " + count++ + " -> " + getName());
+                out.println("car Place: " + count++ + " -> " + getName());
             }
         }
     }
