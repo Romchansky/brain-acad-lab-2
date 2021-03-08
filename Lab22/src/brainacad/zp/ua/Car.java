@@ -2,7 +2,7 @@ package brainacad.zp.ua;
 
 public class Car implements Runnable {
 
-   private String name;
+    private String name;
     private int maxSpeed;
 
     public String getName() {

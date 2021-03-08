@@ -1,10 +1,6 @@
 package ua.zp.brainacad;
 
-import  java.util.Arrays;
 
-import static java.lang.System.*;
-import static ua.zp.brainacad.BookNew.generateArrayByPages;
-import static ua.zp.brainacad.BookNew.generateChaptersByPages;
 
 
 public class BookNewTest {
@@ -18,16 +14,27 @@ public class BookNewTest {
         book.setDate("1986 - 2013");
         book.setNumberOfBooksInACycle(8);
         book.setNumberOfPage(850);
+        book.setChapterCount(25);
         book.setPrice(882.50);
 
-        book.setArr(generateArrayByPages(850));
-        out.println(Arrays.toString(book.getArr()));
-        String [][] result = generateChaptersByPages(book.getArr(),10);
-        out.println("Done");
-        out.println(Arrays.toString(result));
 
+        book.goToPage(25);
 
+        for (int i = 0; i < book.getChapterCount(); i++) {
+            book.setChapterNamePage(("Chapter" + (i + 1)), (int) Math.round(book.getNumberOfPage() / book.getChapterCount()*i+1), i);
         }
 
+
+
+
+//        book.setArr(generateArrayByPages(850));
+
+//        String [][] result = generateChaptersByPages(book.getArr(),12);
+
+//        out.println(Arrays.toString(result));
+
+
     }
+
+}
 

@@ -1,35 +1,55 @@
 package ua.zp.brainacad;
 
-import static java.util.Objects.nonNull;
-
 public class BookNew {
 
     static String currency = "грн";
-    public String name;
-    public String author;
-    public String genre;
-    public String publishingOffice;
-    public String date;
-    public int numberOfBooksInACycle;
-    public int numberOfPage;
-    public double price;
-    public int [] chapters;
-    private String[]arr;
+    private String name;
+    private String author;
+    private String genre;
+    private String publishingOffice;
+    private String date;
+    private int numberOfBooksInACycle;
+    private int numberOfPage;
+    private int chapterCount;
+    private double price;
+    private int[] chapters;
+    private String[] chapterName;
 
-    public String[] getArr() {
-        return arr;
+    public String[] getChapterName() {
+        return chapterName;
     }
 
-    public void setArr(String[] arr) {
-        this.arr = arr;
+    public void setChapterNamePage(String name, int page, int index ) {
+        this.chapterName[index] = name;
+        this.chapters[index] = page;
     }
 
-    public int[]getChapters(){
+    public boolean goToPage(int page) {
+
+        if (this.numberOfPage >= page && page > 0) {
+            System.out.println("Go to page: " + page);
+            return true;
+        } else {
+            System.out.println("Page not found! In book " + this.numberOfPage + "pages");
+            return false;
+        }
+    }
+
+    public int getChapterCount() {
+        return chapterCount;
+    }
+
+    public void setChapterCount(int chapterCount) {
+        this.chapterCount = chapterCount;
+    }
+
+
+    public int[] getChapters() {
         return chapters;
     }
 
-    public void setChapters(int [] chapters){
-        this.chapters=chapters;
+    public void setChapters(int[] chapters) {
+        this.chapters = chapters;
     }
 
     public static String getCurrency() {
@@ -100,31 +120,31 @@ public class BookNew {
         this.price = price;
     }
 
-    public static String [] generateArrayByPages(int numberOfPage) {
-        String [] array = new String[numberOfPage];
-        for (int i = 0; i < numberOfPage; i++) {
-            array[i]=(i+1) + "стр.";
-        }
-        return array;
-    }
+//    public static String [] generateArrayByPages(int numberOfPage) {
+//        String [] array = new String[numberOfPage];
+//        for (int i = 0; i < numberOfPage; i++) {
+//            array[i]=(i+1) + "стр.";
+//        }
+//        return array;
+//    }
 
-    public static String [][] generateChaptersByPages(String [] pages,int chaptersCount){
-        if(nonNull(pages)){
-            throw new RuntimeException("глав не должно быть меньше чем 1");
-        }
-        if(chaptersCount <= 0) {
-            throw new RuntimeException("глав не должно быть меньше чем 1");
-        }
-
-        int size = pages.length/chaptersCount;
-        String [][] chapters = new String[chaptersCount][size];
-        for (int i = 0; i <size ; i++) {
-            for (int j = i; j < size ; j++) {
-                chapters[i][j] = pages[j+size*i];
-            }
-        }
-        return chapters;
-    }
+//    public static String [][] generateChaptersByPages(String [] pages,int chaptersCount){
+//        if(nonNull(pages)){
+//            throw new RuntimeException("глав не должно быть меньше чем 1");
+//        }
+//        if(chaptersCount <= 0) {
+//            throw new RuntimeException("глав не должно быть меньше чем 1");
+//        }
+//
+//        int size = pages.length/chaptersCount;
+//        String [][] chapters = new String[chaptersCount][size];
+//        for (int i = 0; i <size ; i++) {
+//            for (int j = i; j < size ; j++) {
+//                chapters[i][j] = pages[j+size*i];
+//            }
+//        }
+//        return chapters;
+//    }
 }
 
 

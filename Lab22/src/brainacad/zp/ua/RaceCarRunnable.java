@@ -3,8 +3,6 @@ package brainacad.zp.ua;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
-import static brainacad.zp.ua.Race.*;
-import static java.lang.System.*;
 import static java.lang.Thread.sleep;
 
 public class RaceCarRunnable extends Car {
@@ -25,13 +23,14 @@ public class RaceCarRunnable extends Car {
         this.countDownLatch = countDownLatch;
     }
 
-    static int count =1;
+    static int count = 1;
+
     public int getRandomSpeed() {
-        int min = getMaxSpeed()/2;
+        int min = getMaxSpeed() / 2;
         int max = getMaxSpeed();
-       Random r = new Random();
-       int speed = r.nextInt((max - min) + 1) + min;
-       return speed;
+        Random r = new Random();
+        int speed = r.nextInt((max - min) + 1) + min;
+        return speed;
     }
 
     public int getPassed() {
@@ -58,30 +57,28 @@ public class RaceCarRunnable extends Car {
         isFinish = finish;
     }
 
-    void print(){
-        out.println("Car name: " + getName() + " => " + " speed: " + getRandomSpeed() +
-                "  progress: " + getPassed() + "  " + getDistance() + "  time: " + startRaceTime + " " + finishTime);
+    void print() {
+        System.out.println("Car name: " + getName() + " => " + "/ speed: " + getRandomSpeed() +
+                " / progress: " + getPassed() + " / " + getDistance() + "/ time: " + Race.startRaceTime);
     }
 
     @Override
     public void run() {
         super.run();
-        while (!isFinish){
+        while (!isFinish) {
             try {
                 int speed = getRandomSpeed();
                 passed += speed;
                 print();
                 sleep(1000);
-                if(passed >= distance)
+                if (passed >= distance)
                     isFinish = true;
-                finishTime = System.currentTimeMillis();
-                finishTime -= startRaceTime.get();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             countDownLatch.countDown();
-            if(passed>=distance){
-                out.println("car Place: " + count++ + " -> " + getName());
+            if (passed >= distance) {
+                System.out.println("car Place: " + count++ + " -> " + getName());
             }
         }
     }
